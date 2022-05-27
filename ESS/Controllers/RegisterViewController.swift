@@ -1,0 +1,31 @@
+//
+//  RegisterViewController.swift
+//  ESS
+//
+//  Created by wido technologies on 27/05/22.
+//
+
+import Foundation
+import Firebase
+import UIKit
+
+class RegisterViewController: UIViewController {
+
+    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
+    
+    @IBAction func registerPressed(_ sender: UIButton) {
+       
+        if let email = emailTextfield.text, let password = passwordTextfield.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                 
+                   // self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                }
+            }
+        }
+    }
+    
+}
