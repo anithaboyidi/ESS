@@ -136,22 +136,20 @@ extension MainViewController: SideMenuViewControllerDelegate {
         case 0:
             // Home
             self.showViewController(viewController: UINavigationController.self, storyboardId: "DashNavID")
+  
         case 1:
-            // Leave
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "LeaveNavID")
-        case 2:
             // Services
             self.showViewController(viewController: UINavigationController.self, storyboardId: "ServicesNavID")
-        case 3:
+        case 2:
             // Calendar
             self.showViewController(viewController: UINavigationController.self, storyboardId: "HolidayNavID")
-        case 4:
+        case 3:
             // Gallery
             self.showViewController(viewController: UINavigationController.self, storyboardId: "GalleryNavID")
-        case 5:
+        case 4:
             // News
             self.showViewController(viewController: UINavigationController.self, storyboardId: "NewsNavID")
-        case 6:
+        case 5:
             // Logout
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             

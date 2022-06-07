@@ -91,15 +91,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmployeeImage" translatesAutoresizingMaskIntoConstraints="NO" id="tJ7-av-kpJ">
-                                <rect key="frame" x="107" y="92" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iS6-OM-Cb6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mmY-7H-6EV"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iS6-OM-Cb6" firstAttribute="leading" secondItem="mmY-7H-6EV" secondAttribute="leading" id="Nb1-SZ-13a"/>
+                            <constraint firstItem="mmY-7H-6EV" firstAttribute="bottom" secondItem="iS6-OM-Cb6" secondAttribute="bottom" id="RIf-Kk-0tQ"/>
+                            <constraint firstItem="mmY-7H-6EV" firstAttribute="trailing" secondItem="iS6-OM-Cb6" secondAttribute="trailing" id="V8Z-F6-qmP"/>
                             <constraint firstItem="rz6-H2-Qcz" firstAttribute="centerX" secondItem="mmY-7H-6EV" secondAttribute="centerX" id="XRF-mh-hgb"/>
+                            <constraint firstItem="iS6-OM-Cb6" firstAttribute="top" secondItem="mmY-7H-6EV" secondAttribute="top" id="b6r-mR-58Q"/>
                             <constraint firstItem="rz6-H2-Qcz" firstAttribute="centerY" secondItem="mmY-7H-6EV" secondAttribute="centerY" id="m4x-lU-jI9"/>
                         </constraints>
                     </view>
@@ -107,8 +111,8 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="Y6c-Lz-ft7"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="EmployeeImage" destination="tJ7-av-kpJ" id="K0U-Gh-olW"/>
                         <outlet property="sideMenuBtn" destination="Y6c-Lz-ft7" id="Q4J-vd-T98"/>
+                        <outlet property="tableView" destination="iS6-OM-Cb6" id="JDX-F7-Qhs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQp-Gx-ol3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,73 +210,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgf-QA-cyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1954" y="1825"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tml-8w-Htr">
-            <objects>
-                <navigationController storyboardIdentifier="LeaveNavID" automaticallyAdjustsScrollViewInsets="NO" id="1Qz-93-oW6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="1Ww-ae-p4l">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.73725490199999999" green="0.1333333333" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fQx-6a-sFe" kind="relationship" relationship="rootViewController" id="oav-NE-wXN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zmW-Rj-LqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1280" y="929"/>
-        </scene>
-        <!--LeaveRequest-->
-        <scene sceneID="elx-OU-sV1">
-            <objects>
-                <viewController id="fQx-6a-sFe" customClass="LeaveRequestViewController" customModule="ESS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Uk8-uy-xcB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uI3-UE-3xb">
-                                <rect key="frame" x="182" y="333" width="50" height="108"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU3-QF-dJP">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRl-xh-m6r">
-                                        <rect key="frame" x="0.0" y="58" width="50" height="50"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="IhQ-0e-hrk"/>
-                        <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="uI3-UE-3xb" firstAttribute="centerY" secondItem="IhQ-0e-hrk" secondAttribute="centerY" id="TsB-Bx-0cP"/>
-                            <constraint firstItem="uI3-UE-3xb" firstAttribute="centerX" secondItem="IhQ-0e-hrk" secondAttribute="centerX" id="cXZ-7Y-7MR"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="LeaveRequest" id="0Kl-0n-vLK">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="wtm-Sr-lPO"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="sideMenuBtn" destination="wtm-Sr-lPO" id="4wd-qN-tUY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0be-Qi-rjS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1281" y="1675"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gdO-mh-siy">
@@ -738,7 +675,6 @@
     </scenes>
     <resources>
         <image name="Employee" width="1000" height="780"/>
-        <image name="EmployeeImage" width="1000" height="780"/>
         <image name="menu" width="25" height="25"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">

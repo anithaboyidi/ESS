@@ -23,7 +23,6 @@ class SideMenuViewController: UIViewController {
 
     var menu: [SideMenuModel] = [
         SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "DASHBOARD"),
-        SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "LEAVE REQUEST"),
         SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "SERVICES"),
         SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "HOLIDAY CALENDAR"),
         SideMenuModel(icon: UIImage(systemName: "person.fill")!, title: "GALLERY"),

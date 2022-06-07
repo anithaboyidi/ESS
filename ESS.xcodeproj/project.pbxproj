@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B583D692849CE4800219DC0 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D682849CE4800219DC0 /* Parser.swift */; };
+		9B583D6B2849D08000219DC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D6A2849D08000219DC0 /* User.swift */; };
+		9BA8FD1B284A11CC00635139 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA8FD19284A11CC00635139 /* EmployeeCell.swift */; };
+		9BA8FD1C284A11CC00635139 /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA8FD1A284A11CC00635139 /* EmployeeCell.xib */; };
 		9BB89E9228409E5B003F869B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB89E9128409E5B003F869B /* AppDelegate.swift */; };
 		9BB89E9428409E5B003F869B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB89E9328409E5B003F869B /* SceneDelegate.swift */; };
 		9BB89E9628409E5B003F869B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB89E9528409E5B003F869B /* WelcomeViewController.swift */; };
@@ -49,6 +53,10 @@
 /* Begin PBXFileReference section */
 		123DF7D1ECF6E2334D62BC36 /* Pods-ESS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESS.release.xcconfig"; path = "Target Support Files/Pods-ESS/Pods-ESS.release.xcconfig"; sourceTree = "<group>"; };
 		7A048A3F86206FC675884AAD /* Pods-ESS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESS.debug.xcconfig"; path = "Target Support Files/Pods-ESS/Pods-ESS.debug.xcconfig"; sourceTree = "<group>"; };
+		9B583D682849CE4800219DC0 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		9B583D6A2849D08000219DC0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9BA8FD19284A11CC00635139 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
+		9BA8FD1A284A11CC00635139 /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
 		9BB89E8E28409E5B003F869B /* ESS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB89E9128409E5B003F869B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BB89E9328409E5B003F869B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +128,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9BA4B6182847466E00B48A53 /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9BB89EB32840A846003F869B /* DashBoardViewController.swift */,
+				9B583D682849CE4800219DC0 /* Parser.swift */,
+				9B583D6A2849D08000219DC0 /* User.swift */,
+				9BA8FD19284A11CC00635139 /* EmployeeCell.swift */,
+				9BA8FD1A284A11CC00635139 /* EmployeeCell.xib */,
+			);
+			path = DashBoard;
+			sourceTree = "<group>";
+		};
 		9BB89E8528409E5B003F869B = {
 			isa = PBXGroup;
 			children = (
@@ -168,9 +188,9 @@
 				9BB89EAD2840A7E5003F869B /* LoginViewController.swift */,
 				9BB89EAF2840A80D003F869B /* MainViewController.swift */,
 				9BB89EB12840A82B003F869B /* SideMenuViewController.swift */,
-				9BB89EB32840A846003F869B /* DashBoardViewController.swift */,
 				9BB89EB52840A861003F869B /* LeaveRequestViewController.swift */,
 				9BB89EB72840A88A003F869B /* ServicesViewController.swift */,
+				9BA4B6182847466E00B48A53 /* DashBoard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -284,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB89EE22840ACB8003F869B /* NewsCell.xib in Resources */,
+				9BA8FD1C284A11CC00635139 /* EmployeeCell.xib in Resources */,
 				9BB89EA128409E5C003F869B /* LaunchScreen.storyboard in Resources */,
 				9BB89EAA2840A752003F869B /* GoogleService-Info.plist in Resources */,
 				9BB89E9E28409E5C003F869B /* Assets.xcassets in Resources */,
@@ -344,7 +365,9 @@
 				9BB89EEE2840B058003F869B /* NewsPosts+CoreDataClass.swift in Sources */,
 				9BB89ED32840AAE1003F869B /* DataLoader.swift in Sources */,
 				9BB89ECE2840AAA7003F869B /* CalendarViewController.swift in Sources */,
+				9BA8FD1B284A11CC00635139 /* EmployeeCell.swift in Sources */,
 				9BB89EB42840A846003F869B /* DashBoardViewController.swift in Sources */,
+				9B583D6B2849D08000219DC0 /* User.swift in Sources */,
 				9BB89EE42840ACD2003F869B /* CoreDataStack.swift in Sources */,
 				9BB89EB22840A82B003F869B /* SideMenuViewController.swift in Sources */,
 				9BB89EDE2840AC90003F869B /* NewsModel.swift in Sources */,
@@ -361,6 +384,7 @@
 				9BB89ED12840AACC003F869B /* EventsData.swift in Sources */,
 				9BB89EC92840AA4F003F869B /* GalleryCollectionViewCell.swift in Sources */,
 				9BB89EAC2840A7C7003F869B /* RegisterViewController.swift in Sources */,
+				9B583D692849CE4800219DC0 /* Parser.swift in Sources */,
 				9BB89E9228409E5B003F869B /* AppDelegate.swift in Sources */,
 				9BB89EDB2840AC6C003F869B /* NewsViewController.swift in Sources */,
 				9BB89E9428409E5B003F869B /* SceneDelegate.swift in Sources */,

@@ -32,6 +32,7 @@ class NewsViewController: UIViewController {
         
         initView()
         getData()
+       
     }
 
     func initView() {
@@ -65,7 +66,7 @@ class NewsViewController: UIViewController {
 
     func getData() {
         var urlRequest = URLRequest(url: URL(string: "https://raw.githubusercontent.com/johncodeos-blog/CoreDataNewsExample/main/news.json")!)
-        urlRequest.cachePolicy = .reloadIgnoringLocalCacheData // We don't want Alamofire to store the data in the memory or disk.
+        urlRequest.cachePolicy = .reloadIgnoringLocalCacheData
         AF.request(urlRequest).responseDecodable(of: NewsModel.self) { response in
             self.processFectchedNewsPosts(news: response.value!)
         }
@@ -83,6 +84,7 @@ class NewsViewController: UIViewController {
 }
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataProvider.fetchedResultsController.sections?.count ?? 0
     }

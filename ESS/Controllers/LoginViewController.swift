@@ -53,6 +53,13 @@ class LoginViewController: UIViewController {
                      self.navigationController?.pushViewController(mainViewController, animated: true)
                     
                  }
+                 let user = Auth.auth().currentUser
+                 if user != nil {
+                     // user is signed in, show user data
+                 }
+                 else {
+                     // user is signed out, show sign-in form
+                 }
 
                    
                         }
